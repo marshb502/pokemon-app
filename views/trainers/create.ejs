@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Pokemon Trainer</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <tbody>
+    <div class="container">
+      <h3><a href="/trainers">Trainer List</a></h3>
+      <h1>Create New Trainer</h1>
+      <form action="/trainers/save" method="post">
+        <table>
+          <body class="createBackground">
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>Pokemon</td>
+              <td><input type="text" name="pokemon" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+          </body>
+        </table>
+      </form>
+    </div>
+  </tbody>
+</html>

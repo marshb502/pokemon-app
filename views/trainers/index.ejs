@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon Trainer List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="mainBackground">
+    <div class="container">
+      <h3><a href="/trainers/create">Create Trainer</a></h3>
+      <h1>Trainer List</h1>
+      <% if(trainers.length>0) { %>
+        <div style="overflow-x:auto;">
+        <table class="list-table">
+        <thead>
+          <tr>
+            <th>Trainer Name</th>
+            <th>Pokemon</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<trainers.length;i++) { %>
+            <tr>
+              <td><a href="/trainers/show/<%= trainers[i]._id%>"><%= trainers[i].name%></a></td>
+              <td><%= trainers[i].pokemon%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+        </div>
+      <% } else { %>
+        <div>No trainers found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

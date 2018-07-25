@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon Trainer Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="showBackground">
+    <div class="container">
+      <h3><a href="/trainers">Full Trainer List</a></h3>
+      <h1>Trainer Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= trainer.name %></td>
+          </tr>
+          <tr>
+            <td>Pokemon</td>
+            <td>:</td>
+            <td><%= trainer.pokemon %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/trainers/edit/<%= trainer._id%>">EDIT</a></h3>
+      <form action="/trainers/delete/<%= trainer._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
