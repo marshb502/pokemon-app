@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon World</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body class="mvpBackground">
+    <div class="container">
+      <h3><a href="/trainers">Full Trainer List</a></h3>
+      <h1> Trainer of the Week</h1>
+<!-- AJAX CALL -->
+<p id="trainerName"></p>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {;
+	getData();
+})
+
+function getData() {
+    $.ajax({
+        url : '/trainers/random',
+        type: 'GET',
+        success : handleData
+    });
+
+};
+
+function handleData(data) {
+    $('#trainerName').html (data.name);
+}
+</script>
+</body>
+</html>
