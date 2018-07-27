@@ -27,6 +27,18 @@ trainerController.show = function(req, res) {
   });
 };
 
+trainerController.random = function(req, res) {
+  Trainer.find({}).exec(function (err, trainers) {
+    if (err) {
+      console.log("Error:", err);
+    }
+    else {
+      var randomTrainer = Math.floor(Math.random() * trainers.length);
+      res.json(trainers[randomTrainer]);
+    }
+  });
+};
+
 // Create new trainer
 trainerController.create = function(req, res) {
   res.render("../views/trainers/create");

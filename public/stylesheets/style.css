@@ -1,27 +1,23 @@
 
-/*
-
-
-@media (max-width: 380px) {
-  table {
-    height: 25%;
-    width: 95%;
-    padding: 2.5%;
-  }
+@media only screen and (max-width: 480px) {
+  .pokemonTitleList {
+  display:none;
 }
-*/
-
-
+  .pokemonNameList {
+  display: none;
+    }
+}
 
 body {
   padding: 30px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: dodgerblue;
+  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: blue;
   text-align: center;
+  text-shadow: 2px 2px 1.3px pink;
 }
 
 a {
-  color: #00B7FF;
+  color: coral;
 }
 
 .mainBackground {
@@ -44,20 +40,33 @@ a {
   background-size: cover;
 }
 
+.mvpBackground {
+  background-image: url("/images/mvpImage.jpg");
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .createBackground {
   background: url('../images/createImage.jpg') no-repeat;
   background-size: cover;
 }
 
-.container {
-  padding: 20px;
+.list-table {
   background-image: url("/images/form-bg.png");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.container {
+  padding: 20px;
   width: 400px;
   border-radius: 6px;
+  
 }
+
+/*BUTTON STYLE*/
 .container h3 a {
   text-decoration: none;
   padding: 10px 20px;
@@ -66,8 +75,9 @@ a {
   color: #FFFFFF;
 }
 
+/*Hover shit*/
 .container h3 a:hover, .container table tr td button:hover {
-  background-color: #78F5AE;
+  background-color: greenyellow;
   color: #999999;
 }
 
@@ -76,15 +86,15 @@ a {
 }
 
 .container table tr td {
-  padding: 5px;
+  padding: 10px;
 }
-
+/*TEXT AREA*/
 .container table tr td input, .container table tr td textarea {
-  border: solid 1px #dddddd;
+  border: solid 1px red;
   padding: 5px 10px;
   border-radius: 6px;
   width: 100%;
-  color: #777777;
+  color: blue;
 }
 
 .container table tr td button {
@@ -97,6 +107,7 @@ a {
   padding: 10px 20px;
 }
 
+/*DELETE BUTTON*/
 .container form button {
   border: solid 1px #CB2027;
   background-color: #DD4B39;
@@ -109,10 +120,14 @@ a {
 
 .container .list-table {
   width: 360px;
-  border: solid 2px #DDDDDD;
+  border: solid 2px red;
   border-spacing: 0;
 }
 
 .container .list-table th {
   border-bottom: solid 2px ;
+}
+
+h1 {
+  text-decoration: overline;
 }

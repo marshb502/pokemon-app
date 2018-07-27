@@ -7,7 +7,7 @@
   <body>
     <div class="container">
       <h3><a href="/trainers">Full Trainer List</a></h3>
-      <h1>Edit Trainer</h1>
+      <h1 id="myName">Edit Trainer</h1>
       <form action="/trainers/update/<%= trainer._id%>" method="post">
         <table>
           <tbody>
@@ -26,5 +26,9 @@
         </table>
       </form>
     </div>
+    <script>
+             const myName=`<%= trainer %>`;
+             console.log(myName);
+            </script>
   </body>
 </html>

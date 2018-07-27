@@ -14,7 +14,7 @@
         <thead>
           <tr>
             <th>Trainer Name</th>
-            <th>Pokemon</th>
+            <th class="pokemonTitleList">Pokemon</th>
           </tr>
         </thead>
         <tbody>
@@ -22,9 +22,10 @@
           <% for(var i=0; i<trainers.length;i++) { %>
             <tr>
               <td><a href="/trainers/show/<%= trainers[i]._id%>"><%= trainers[i].name%></a></td>
-              <td><%= trainers[i].pokemon%></td>
+              <td class="pokemonNameList"><%= trainers[i].pokemon%></td>
             </tr>
           <% } %>
+          <h2>Check out the <a href="/trainers/mvp">Trainer of the Week</a> here!</h2>
         </tbody>
       </table>
         </div>
